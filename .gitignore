@@ -1,0 +1,24 @@
+# This repository is intentionally documentation-first.
+# Keep operational source code and data out of the public showcase.
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.db
+*.sql
+*.dump
+media/
+uploads/
+staticfiles/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
