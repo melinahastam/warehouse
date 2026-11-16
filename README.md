@@ -35,20 +35,28 @@ flowchart LR
 
 ## بخش‌هایی که پیاده‌سازی کردم
 
-| حوزه | پیاده‌سازی انجام‌شده |
-|---|---|
-| موتور موجودی | موجودی فیزیکی، رزروشده، تخصیص‌یافته و قابل‌فروش؛ جلوگیری از مانده منفی؛ قفل سطری با `select_for_update` |
-| فروش | گردش وضعیت پیش‌فاکتور → سفارش → تأیید → ارسال → تحویل → تسویه و انتقال اتمیک تعهد موجودی |
-| خرید | ثبت فاکتور خرید، صدور رسید انبار، کنترل تطابق اقلام و تغییر وضعیت پس از دریافت |
-| اسناد انبار | رسید، حواله، تعدیل افزایشی/کاهشی، برگشت خرید و برگشت فروش با Draft/Post/Cancel |
-| کاردکس | ثبت تغییر موجودی، مانده بعد از هر تراکنش و اتصال هر ردیف به دقیقاً یک سند مرجع |
-| انبارگردانی | Snapshot موجودی ابتدای شمارش، اسکن بارکد، محاسبه کسری/اضافی و تولید سند تعدیل منطبق با مغایرت |
-| رهگیری کالا | کد و بارکد، گروه، برند، واحد، وزن، حجم، ابعاد، تصویر، مشخصات فنی، بچ، سریال، تولید و انقضا |
-| گزارش مدیریتی | KPI موجودی قابل‌فروش، کالای راکد و کم‌گردش، سلامت موجودی، گردش کالا و مغایرت‌های باز |
-| Excel | خروجی چندبرگی برای Summary، گردش، کالاهای راکد، مغایرت‌ها، کاردکس و اسناد انبار |
-| امنیت | احراز هویت Django، RBAC مبتنی بر Group/Permission، پاسخ 403 برای API و محدودسازی عملیات حساس |
-| استقرار | Settings مجزای Development/Production، متغیرهای محیطی، PostgreSQL، Secure Cookie، HSTS و CSRF Trusted Origins |
-| تجربه کاربری | رابط فارسی RTL، طراحی Responsive، فرم‌های عملیاتی، چاپ رسمی اسناد و Date Picker شمسی |
+<table dir="rtl">
+  <thead>
+    <tr>
+      <th align="right" dir="rtl">حوزه</th>
+      <th align="right" dir="rtl">پیاده‌سازی انجام‌شده</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td align="right" dir="rtl">موتور موجودی</td><td align="right" dir="rtl">موجودی فیزیکی، رزروشده، تخصیص‌یافته و قابل‌فروش؛ جلوگیری از مانده منفی؛ قفل سطری با <code>select_for_update</code></td></tr>
+    <tr><td align="right" dir="rtl">فروش</td><td align="right" dir="rtl">گردش وضعیت پیش‌فاکتور ← سفارش ← تأیید ← ارسال ← تحویل ← تسویه و انتقال اتمیک تعهد موجودی</td></tr>
+    <tr><td align="right" dir="rtl">خرید</td><td align="right" dir="rtl">ثبت فاکتور خرید، صدور رسید انبار، کنترل تطابق اقلام و تغییر وضعیت پس از دریافت</td></tr>
+    <tr><td align="right" dir="rtl">اسناد انبار</td><td align="right" dir="rtl">رسید، حواله، تعدیل افزایشی/کاهشی، برگشت خرید و برگشت فروش با <code>Draft / Post / Cancel</code></td></tr>
+    <tr><td align="right" dir="rtl">کاردکس</td><td align="right" dir="rtl">ثبت تغییر موجودی، مانده بعد از هر تراکنش و اتصال هر ردیف به دقیقاً یک سند مرجع</td></tr>
+    <tr><td align="right" dir="rtl">انبارگردانی</td><td align="right" dir="rtl">ثبت Snapshot موجودی ابتدای شمارش، اسکن بارکد، محاسبه کسری/اضافی و تولید سند تعدیل منطبق با مغایرت</td></tr>
+    <tr><td align="right" dir="rtl">رهگیری کالا</td><td align="right" dir="rtl">کد و بارکد، گروه، برند، واحد، وزن، حجم، ابعاد، تصویر، مشخصات فنی، بچ، سریال، تولید و انقضا</td></tr>
+    <tr><td align="right" dir="rtl">گزارش مدیریتی</td><td align="right" dir="rtl">موجودی قابل‌فروش، کالای راکد و کم‌گردش، سلامت موجودی، گردش کالا، KPI و مغایرت‌های باز</td></tr>
+    <tr><td align="right" dir="rtl">Excel</td><td align="right" dir="rtl">خروجی چندبرگی برای Summary، گردش، کالاهای راکد، مغایرت‌ها، کاردکس و اسناد انبار</td></tr>
+    <tr><td align="right" dir="rtl">امنیت</td><td align="right" dir="rtl">احراز هویت Django، کنترل دسترسی مبتنی بر Group / Permission و RBAC، پاسخ 403 برای API و محدودسازی عملیات حساس</td></tr>
+    <tr><td align="right" dir="rtl">استقرار</td><td align="right" dir="rtl">Settings مجزای Development / Production، متغیرهای محیطی، PostgreSQL، Secure Cookie، HSTS و CSRF Trusted Origins</td></tr>
+    <tr><td align="right" dir="rtl">تجربه کاربری</td><td align="right" dir="rtl">رابط فارسی RTL، طراحی Responsive، فرم‌های عملیاتی، چاپ رسمی اسناد و Date Picker شمسی</td></tr>
+  </tbody>
+</table>
 
 ## قواعد مهم دامنه
 
@@ -64,13 +72,15 @@ stateDiagram-v2
     DELIVERED --> SETTLED
 ```
 
-- `available_stock = stock - reserved_stock - allocated_stock`
-- ثبت نهایی سند در یک تراکنش دیتابیس انجام می‌شود.
-- محصولات در عملیات حساس به ترتیب ثابت قفل می‌شوند تا ریسک Race Condition و Deadlock کاهش یابد.
-- رسید/حواله وابسته به فاکتور باید دقیقاً با اقلام سند مرجع منطبق باشد.
-- مجموع برگشت‌های ثبت‌شده نمی‌تواند از مقدار خرید یا فروش مرجع بیشتر شود.
-- سند تعدیل انبارگردانی فقط زمانی معتبر است که اقلام آن دقیقاً برابر کسری یا اضافی Snapshot باشند.
-- هر ردیف کاردکس دقیقاً یک منشأ دارد: سند انبار یا تراکنش دستی.
+<ul dir="rtl">
+  <li align="right"><code>available_stock = stock - reserved_stock - allocated_stock</code></li>
+  <li align="right">ثبت نهایی سند در یک تراکنش دیتابیس انجام می‌شود.</li>
+  <li align="right">محصولات در عملیات حساس به ترتیب ثابت قفل می‌شوند تا ریسک Race Condition و Deadlock کاهش یابد.</li>
+  <li align="right">رسید/حواله وابسته به فاکتور باید دقیقاً با اقلام سند مرجع منطبق باشد.</li>
+  <li align="right">مجموع برگشت‌های ثبت‌شده نمی‌تواند از مقدار خرید یا فروش مرجع بیشتر شود.</li>
+  <li align="right">سند تعدیل انبارگردانی فقط زمانی معتبر است که اقلام آن دقیقاً برابر کسری یا اضافی Snapshot باشند.</li>
+  <li align="right">هر ردیف کاردکس دقیقاً یک منشأ دارد: سند انبار یا تراکنش دستی.</li>
+</ul>
 
 ## معماری
 
@@ -94,40 +104,58 @@ flowchart TB
 
 ## بخش‌های منتخب پیاده‌سازی
 
-| نمونه | رفتار فنی قابل بررسی |
-|---|---|
-| [Inventory Engine](examples/domain/inventory_engine.py) | قفل سطری، کنترل invariantها، تغییر اتمیک مانده و تولید کاردکس |
-| [Sales Commitment](examples/domain/sales_commitment.py) | انتقال موجودی بین bucketهای رزرو و تخصیص در گردش وضعیت فروش |
-| [Warehouse Posting](examples/domain/warehouse_posting.py) | اعتبارسنجی سند مرجع، برگشت، انبارگردانی و ثبت نهایی سند |
-| [Inventory Count](examples/domain/inventory_counting.py) | Snapshot شمارش و جلوگیری از اسکن خارج از جلسه باز |
-| [RBAC](examples/security/rbac.py) | ترکیب Group، Permission، نقش و پاسخ مناسب HTML/JSON |
-| [Workflow Test](examples/tests/test_inventory_workflow.py) | تست End-to-End رزرو، تخصیص، حواله، خروج موجودی و کاردکس |
+<table dir="rtl">
+  <thead>
+    <tr>
+      <th align="right" dir="rtl">نمونه</th>
+      <th align="right" dir="rtl">رفتار فنی قابل بررسی</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td align="right" dir="rtl"><a href="examples/domain/inventory_engine.py">Inventory Engine</a></td><td align="right" dir="rtl">قفل سطری، کنترل invariantها، تغییر اتمیک مانده و تولید کاردکس</td></tr>
+    <tr><td align="right" dir="rtl"><a href="examples/domain/sales_commitment.py">Sales Commitment</a></td><td align="right" dir="rtl">انتقال موجودی بین bucketهای رزرو و تخصیص در گردش وضعیت فروش</td></tr>
+    <tr><td align="right" dir="rtl"><a href="examples/domain/warehouse_posting.py">Warehouse Posting</a></td><td align="right" dir="rtl">اعتبارسنجی سند مرجع، برگشت، انبارگردانی و ثبت نهایی سند</td></tr>
+    <tr><td align="right" dir="rtl"><a href="examples/domain/inventory_counting.py">Inventory Count</a></td><td align="right" dir="rtl">Snapshot شمارش و جلوگیری از اسکن خارج از جلسه باز</td></tr>
+    <tr><td align="right" dir="rtl"><a href="examples/security/rbac.py">RBAC</a></td><td align="right" dir="rtl">ترکیب Group، Permission، نقش و پاسخ مناسب HTML / JSON</td></tr>
+    <tr><td align="right" dir="rtl"><a href="examples/tests/test_inventory_workflow.py">Workflow Test</a></td><td align="right" dir="rtl">تست End-to-End رزرو، تخصیص، حواله، خروج موجودی و کاردکس</td></tr>
+  </tbody>
+</table>
 
 این فایل‌ها عمداً standalone نیستند؛ آن‌ها excerptهای واقعی از ماژول‌های اصلی‌اند و مرزهای مالکیت سورس را حفظ می‌کنند.
 
 ## شاخص‌های پروژه
 
-- ۱۵ مدل و موجودیت دامنه‌ای اصلی
-- ۵۳ مسیر وب و عملیاتی
-- ۱۲ migration تکاملی دیتابیس
-- ۲۸ Template فارسی و Responsive
-- بیش از ۵٬۳۰۰ خط Python و ۷٬۳۰۰ خط Template
-- ۲۲ تست امنیت، پایداری موجودی، Workflow و گزارش‌گیری
+<ul dir="rtl">
+  <li align="right">۱۵ مدل و موجودیت دامنه‌ای اصلی</li>
+  <li align="right">۵۳ مسیر وب و عملیاتی</li>
+  <li align="right">۱۲ migration تکاملی دیتابیس</li>
+  <li align="right">۲۸ Template فارسی و Responsive</li>
+  <li align="right">بیش از ۵٬۳۰۰ خط Python و ۷٬۳۰۰ خط Template</li>
+  <li align="right">۲۲ تست امنیت، پایداری موجودی، Workflow و گزارش‌گیری</li>
+</ul>
 
 اعداد بالا از نسخه محلی پروژه در زمان آماده‌سازی این Showcase استخراج شده‌اند. جزئیات دامنه در [فهرست قابلیت‌ها](docs/FEATURES.md) قابل مشاهده است.
 
 ## چالش‌های فنی و راه‌حل‌ها
 
-| چالش | راه‌حل پیاده‌سازی‌شده |
-|---|---|
-| جلوگیری از Overselling | تفکیک stock/reserved/allocated و کنترل available stock داخل تراکنش |
-| هم‌زمانی چند اپراتور | `transaction.atomic`، `select_for_update` و ترتیب قطعی قفل محصولات |
-| هماهنگی فروش و انبار | تبدیل وضعیت سفارش به تعهد موجودی و آزادسازی تخصیص هنگام ثبت حواله |
-| صحت برگشت کالا | محاسبه مجموع برگشت‌های قبلی و کنترل سقف باقی‌مانده سند مرجع |
-| مغایرت شمارش | Snapshot مستقل از تغییرات بعدی و الزام تطابق کامل سند تعدیل با اختلاف |
-| گزارش قابل تصمیم‌گیری | طبقه‌بندی Active/Slow/Stagnant، سلامت موجودی و خروجی Excel چندبرگی |
-| تفکیک سطح دسترسی | Decorator مشترک برای Permission/Role با رفتار متفاوت برای HTML و JSON |
-| آماده‌سازی Production | جداسازی Settings و انتقال Secret، DB و Security Flags به Environment |
+<table dir="rtl">
+  <thead>
+    <tr>
+      <th align="right" dir="rtl">چالش</th>
+      <th align="right" dir="rtl">راه‌حل پیاده‌سازی‌شده</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td align="right" dir="rtl">جلوگیری از Overselling</td><td align="right" dir="rtl">تفکیک stock / reserved / allocated و کنترل available stock داخل تراکنش</td></tr>
+    <tr><td align="right" dir="rtl">هم‌زمانی چند اپراتور</td><td align="right" dir="rtl"><code>transaction.atomic</code>، <code>select_for_update</code> و ترتیب قطعی قفل محصولات</td></tr>
+    <tr><td align="right" dir="rtl">هماهنگی فروش و انبار</td><td align="right" dir="rtl">تبدیل وضعیت سفارش به تعهد موجودی و آزادسازی تخصیص هنگام ثبت حواله</td></tr>
+    <tr><td align="right" dir="rtl">صحت برگشت کالا</td><td align="right" dir="rtl">محاسبه مجموع برگشت‌های قبلی و کنترل سقف باقی‌مانده سند مرجع</td></tr>
+    <tr><td align="right" dir="rtl">مغایرت شمارش</td><td align="right" dir="rtl">Snapshot مستقل از تغییرات بعدی و الزام تطابق کامل سند تعدیل با اختلاف</td></tr>
+    <tr><td align="right" dir="rtl">گزارش قابل تصمیم‌گیری</td><td align="right" dir="rtl">طبقه‌بندی Active / Slow / Stagnant، سلامت موجودی و خروجی Excel چندبرگی</td></tr>
+    <tr><td align="right" dir="rtl">تفکیک سطح دسترسی</td><td align="right" dir="rtl">Decorator مشترک برای Permission / Role با رفتار متفاوت برای HTML و JSON</td></tr>
+    <tr><td align="right" dir="rtl">آماده‌سازی Production</td><td align="right" dir="rtl">جداسازی Settings و انتقال Secret، DB و Security Flags به Environment</td></tr>
+  </tbody>
+</table>
 
 ## تکنولوژی‌ها
 
@@ -135,12 +163,14 @@ flowchart TB
 
 ## مستندات
 
-- [معماری سیستم](docs/ARCHITECTURE.md)
-- [فهرست قابلیت‌ها](docs/FEATURES.md)
-- [مدل دامنه و داده](docs/DATA_MODEL.md)
-- [شرح فنی پیاده‌سازی](docs/TECHNICAL_DEEP_DIVE.md)
-- [راهنمای نمونه‌کدها](examples/README.md)
-- [مرز نسخه عمومی](NOTICE.md)
+<ul dir="rtl">
+  <li align="right"><a href="docs/ARCHITECTURE.md">معماری سیستم</a></li>
+  <li align="right"><a href="docs/FEATURES.md">فهرست قابلیت‌ها</a></li>
+  <li align="right"><a href="docs/DATA_MODEL.md">مدل دامنه و داده</a></li>
+  <li align="right"><a href="docs/TECHNICAL_DEEP_DIVE.md">شرح فنی پیاده‌سازی</a></li>
+  <li align="right"><a href="examples/README.md">راهنمای نمونه‌کدها</a></li>
+  <li align="right"><a href="NOTICE.md">مرز نسخه عمومی</a></li>
+</ul>
 
 ## مجوز و مالکیت
 
